@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.main-container {
+    @apply px-[70px]
+}
+
+.main-container-left {
+    @apply pl-[70px]
+}
+
+.main-container-right {
+    @apply pr-[70px]
+}
+
+
+.font {
+    font-style: normal;
+    font-family: Kanit;
+}
+
+.header-font {
+    font-size: 1vw;
+}
+
+.header-logo {
+    font-size: 1.3vw;
+}
+
+.font-65px {
+    font-size: 65px;
+}
+
+.background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.font-40px {
+    font-size: 40px;
+}
+
+.font-18px {
+    font-size: 18px;
+}
+
+.font-30px {
+    font-size: 30px;
+}
+
+.font-16px {
+    font-size: 16px;
+}
+
+.font-20px {
+    font-size: 20px;
+}
+
+.font-12px {
+    font-size: 12px;
+}
+
+.hovered {
+    &:hover {
+        background-color: #333333;
+        color: #135D66;
+    }
+}
+
+// .Books-carousel {
+//     --f-carousel-spacing: 10px;
+//     width: 100vw;
+//     margin-bottom: 0px !important;
+
+//     .f-carousel__slide {
+//         width: calc((100% - var(--f-carousel-spacing) * 3) / 3);
+//         height: 395px;
+//         background-color: #EDEDED;
+
+//     }
+
+//     .f-carousel__dots{
+//         display: none;
+//     }
+// }
+
+
+// .Books-carousel {
+//     .f-button {
+//         @apply main-container
+//     }
+// }
