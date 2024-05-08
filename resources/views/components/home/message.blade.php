@@ -1,4 +1,4 @@
-<div class="w-screen flex justify-center pt-[100px]">
+<div class="w-screen flex justify-center pt-[120px]">
 
     <div class="h-[305px] w-[800px] flex relative">
 
@@ -8,7 +8,7 @@
 
         <div class="h-full w-full absolute top-0 left-0 z-[10]">
             <div class="w-full h-full relative">
-                <img class="h-full w-full" src="/svgs/home/logo-message.svg" alt="">
+                <img class="h-full w-full opacity-[0.3]" src="/svgs/home/logo-message.svg" alt="">
                 <div class="h-full w-full bg-white opacity-[0.8] absolute top-0 left-0 "></div>
             </div>
         </div>

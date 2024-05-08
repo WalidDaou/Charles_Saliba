@@ -8,7 +8,7 @@
 @endcomponent
 
 <div class="main-container">
-    <button class="font w-[150px] h-[35px] bg-[#135D66]  text-white font-12px hovered">View All</button>
+    <button class="hovered">View All</button>
 </div>
 
 </div>

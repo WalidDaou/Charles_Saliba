@@ -46,88 +46,88 @@
 
         @endforeach
     </div>
+</div>
 
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.umd.js">
+</script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.umd.js">
-    </script>
-
-    <script>
-        new Carousel(document.getElementById("horizontalCarousel"), {
-            Autoplay: {
-                progressParentEl: (autoplay) => {
-                    return autoplay.instance.viewport;
-                }
-            }
-        }, {
-            Autoplay
-        });
-
-        const container_2 = document.getElementById("horizontalCarouselTwo");
-        const options_2 = {
-            Autoplay: {
-                autoStart: true, // Autoplay starts automatically after initialization
-                timeout: 600,
-
-            },
-        };
-
-        new Carousel(container_2, options_2, {
-            Autoplay
-        });
-    </script>
-
-    <style>
-        .horizontal-carousel {
-
-            height: fit-content;
-            --f-carousel-spacing: 15px;
-            margin-bottom: 0px !important;
-
-            .f-carousel__slide {
-                width: calc((100% - var(--f-carousel-spacing) * 3) / 3);
-
-
-                height: 250px;
-
-            }
-
-            .f-carousel__nav button {
-                display: none !important;
-            }
-
-            .f-carousel__dots {
-                display: none;
+<script>
+    new Carousel(document.getElementById("horizontalCarousel"), {
+        Autoplay: {
+            progressParentEl: (autoplay) => {
+                return autoplay.instance.viewport;
             }
         }
+    }, {
+        Autoplay
+    });
 
-        .horizontal-carousel-2 {
-            margin: auto;
-            height: fit-content;
-            --f-carousel-spacing: 15px;
-            margin-bottom: 0px !important;
+    const container_2 = document.getElementById("horizontalCarouselTwo");
+    const options_2 = {
+        Autoplay: {
+            autoStart: true, // Autoplay starts automatically after initialization
+            timeout: 600,
 
-            .f-carousel__slide {
-                width: 35%;
+        },
+    };
 
-                height: 250px;
+    new Carousel(container_2, options_2, {
+        Autoplay
+    });
+</script>
 
-            }
+<style>
+    .horizontal-carousel {
 
-            .f-carousel__track {
+        height: fit-content;
+        --f-carousel-spacing: 15px;
+        margin-bottom: 0px !important;
 
-                transform: translateX(-100%);
+        .f-carousel__slide {
+            width: calc((100% - var(--f-carousel-spacing) * 3) / 3);
 
-            }
 
+            height: 250px;
 
-            .f-carousel__nav button {
-                display: none !important;
-            }
-
-            .f-carousel__dots {
-                display: none;
-            }
         }
-    </style>
+
+        .f-carousel__nav button {
+            display: none !important;
+        }
+
+        .f-carousel__dots {
+            display: none;
+        }
+    }
+
+    .horizontal-carousel-2 {
+        margin: auto;
+        height: fit-content;
+        --f-carousel-spacing: 15px;
+        margin-bottom: 0px !important;
+
+        .f-carousel__slide {
+            width: 35%;
+
+            height: 250px;
+
+        }
+
+        .f-carousel__track {
+
+            transform: translateX(-100%);
+
+        }
+
+
+        .f-carousel__nav button {
+            display: none !important;
+        }
+
+        .f-carousel__dots {
+            display: none;
+        }
+    }
+</style>

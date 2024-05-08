@@ -1,4 +1,4 @@
-<div class="pt-[80px]">
+<div class="pt-[100px]">
 
     <div class="w-screen h-[auto] background " style="background-image: url('/images/home/journay.jpg');">
 
@@ -15,7 +15,7 @@
         <div id="bigContainer" class="relative mt-[50px]">
 
 
-            <div id="smallContainer" class="flex flex-row w-screen overflow-x-scroll absolute top-0 left-0 z-[10]">
+            <div id="smallContainer" class="cursor-grab  flex flex-row w-screen overflow-x-scroll absolute top-0 left-0 z-[10]">
 
 
                 @foreach($journey as $index => $item)
@@ -196,5 +196,5 @@
         });
     });
 
-    
+
 </script>
