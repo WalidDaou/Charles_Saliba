@@ -37,37 +37,37 @@ class Journey extends Model
 
             (object)[
                 'id' =>  '',
-                'date' => '',
+                'date' => '1988 - 1992',
                 'content' => 'Sidoon National School till Grade 5, then displaced by war to Beirut'
             ],
 
             (object)[
                 'id' =>  '',
-                'date' => '',
+                'date' => '1988 - 1992',
                 'content' => 'Sidoon National School till Grade 5, then displaced by war to Beirut'
             ],
 
             (object)[
                 'id' =>  '',
-                'date' => '',
+                'date' => '1988 - 1992',
                 'content' => 'Sidoon National School till Grade 5, then displaced by war to Beirut'
             ],
 
             (object)[
                 'id' =>  '',
-                'date' => '',
+                'date' => '1988 - 1992',
                 'content' => 'Sidoon National School till Grade 5, then displaced by war to Beirut'
             ],
 
             (object)[
                 'id' =>  '',
-                'date' => '',
+                'date' => '1988 - 1992',
                 'content' => 'Sidoon National School till Grade 5, then displaced by war to Beirut'
             ],
 
             (object)[
                 'id' =>  '',
-                'date' => '',
+                'date' => '1988 - 1992',
                 'content' => 'Sidoon National School till Grade 5, then displaced by war to Beirut'
             ],
 
