@@ -117,9 +117,15 @@
 }
 
 
-input::placeholder {
+.input-1::placeholder {
     @apply font font-normal font-16px text-black pl-[20px]
 }
+
+.input-2::placeholder {
+    @apply font font-normal font-12px text-black opacity-[0.4]
+}
+
+
 
 .footer {
     p {

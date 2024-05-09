@@ -2,7 +2,7 @@
 
     @foreach($charles as $charle)
 
-    <div class="flex flex-row border-t-[1px] pt-[40px] pb-[40px] border-collapse pb-[10px]">
+    <div class="flex flex-row border-b-[1px] pt-[40px] pb-[40px] border-collapse pb-[10px]">
         <div class="w-[45%] ">
             <div class="flex flex-row gap-[15px] items-center">
                 <img class="w-[55px]" src="/svgs/charle/main-logo.svg" alt="">

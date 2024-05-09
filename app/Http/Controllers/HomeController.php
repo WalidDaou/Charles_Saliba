@@ -67,7 +67,7 @@ class HomeController extends Controller
         return view('pages.info-book', ['book' => $book,]);
     }
 
-    public static function rendercharles($id)
+    public static function rendercharles()
     {
 
         $charles = Charle::getCHarles();
@@ -77,5 +77,11 @@ class HomeController extends Controller
         $expertises = Charle::getExpertises();
 
         return view('pages.charles-saliba', ['charles' => $charles, 'previouslys' => $Previouslys, 'expertises'  => $expertises,]);
+    }
+
+    public static function contact()
+    {
+
+        return view('pages.contact-us');
     }
 }
