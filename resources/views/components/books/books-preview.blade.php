@@ -4,7 +4,7 @@
 
     @foreach ($books as $book)
 
-    <div class="h-[420px] w-[400px] relative">
+    <div onclick="window.location.href='/info/{{$book->id}}'" class="h-[420px] w-[400px] relative cursor-pointer">
         <div class="absolute top-0 left-0">
             <img class="h-[340px]" src="/svgs/home/{{$book->img}}.svg" alt="">
         </div>

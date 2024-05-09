@@ -1,6 +1,6 @@
 <div class="pt-[100px]">
 
-    <div class="w-screen h-[auto] background " style="background-image: url('/images/home/journay.jpg');">
+    <div id="myJourney" class="w-screen h-[auto] background " style="background-image: url('/images/home/journay.jpg');">
 
 
         <div class="w-full main-container pt-[20px] flex justify-between items-center">
@@ -195,6 +195,4 @@
             myDiv.style.cursor = 'grab';
         });
     });
-
-
 </script>

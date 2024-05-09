@@ -1,5 +1,6 @@
 <header class="w-screen main-container bg-white flex flex-row justify-between h-[70px] fixed z-[1000]" style="box-shadow: 0px 20px 30px #00000012;">
-    <div class="h-full flex flex-row items-center gap-[15px]">
+
+    <div onclick="window.location.href='{{ Request::path() === '/' ? '#' : url('/') }}'" class="h-full flex flex-row items-center gap-[15px] cursor-pointer">
 
         <div class="logo">
 
@@ -23,18 +24,17 @@
             <p class="font-extrabold header-logo">SALIBA</p>
         </div>
 
-
-
     </div>
+
     <div class="flex flex-row gap-[30px] h-full items-center py-[15px]">
 
-        <p class="font font-medium header-font ">Welcome to My Site</p>
-        <p class="font font-medium header-font ">Authorship</p>
-        <p class="font font-medium header-font ">Media</p>
-        <p class="font font-medium header-font ">Books</p>
-        <p class="font font-medium header-font ">My Journey</p>
-        <p class="font font-medium header-font ">Resume</p>
-        <button class="font font-medium header-font h-full text-white bg-[#135D66] w-[150px] hovered" type="submit">Book a Consultation</button>
+        <a  onclick="scrollToDivWithOffset('mySite', 70)" class="font font-medium header-font cursor-pointer">Welcome to My Site</a>
+        <a href="{{ Request::is('/leadership') ? '#' : url('/leadership') }}" class="font font-medium header-font cursor-pointer">Authorship</a>
+        <a href="{{ Request::is('/media') ? '#' : url('/media') }}" class="font font-medium header-font cursor-pointer">Media</a>
+        <a href="{{ Request::is('/books') ? '#' : url('/books') }}" class="font font-medium header-font cursor-pointer">Books</a>
+        <a onclick="scrollToDivWithOffset('myJourney', 70)" class="font font-medium header-font cursor-pointer">My Journey</a>
+        <a href="/chales" class="font font-medium header-font cursor-pointer">Resume</a>
+        <button onclick="window.location.href='/contact-us'" class="font font-medium header-font h-full text-white bg-[#135D66] w-[150px] hovered" type="submit">Book a Consultation</button>
 
     </div>
 </header>
@@ -48,4 +48,16 @@
     var heightDiv = document.getElementById('heightDiv');
     var headerHeight = header.clientHeight;
     heightDiv.style.height = headerHeight + 'px';
+
+
+    function scrollToDivWithOffset(id, offset) {
+        var target = document.getElementById(id);
+        if (target) {
+            var targetOffset = target.offsetTop - offset;
+            window.scrollTo({
+                top: targetOffset,
+                behavior: 'smooth'
+            });
+        }
+    }
 </script>

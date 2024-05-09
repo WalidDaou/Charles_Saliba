@@ -8,7 +8,7 @@
 @endcomponent
 
 <div class="main-container">
-    <button class="hovered">View All</button>
+    <button onclick="window.location.href='/{{$link}}'" class="hovered">View All</button>
 </div>
 
 </div>

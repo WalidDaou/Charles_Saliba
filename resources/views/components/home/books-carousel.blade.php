@@ -1,48 +1,11 @@
-<!-- <div class="Books-carousel f-carousel main-container" id="BooksCarousell">
-    @foreach($books as $book)
-    <div class="f-carousel__slide"><img src="/svgs/home/{{$book->img}}.svg" alt=""></div>
-    @endforeach
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
-<script>
-    new Carousel(document.getElementById("BooksCarousell"));
-</script> -->
-
-<!-- <style>
-     .Books-carousel {
-         --f-carousel-spacing: 10px;
-         width: 100vw;
-         margin-bottom: 0px !important;
-
-         .f-carousel__slide {
-             width: calc((100% - var(--f-carousel-spacing) * 3) / 3);
-             height: 395px;
-             background-color: #EDEDED;
-
-         }
-
-         .f-carousel__dots{
-             display: none;
-         }
-     }
-
-
-     .Books-carousel {
-         .f-button {
-             @apply main-container
-         }
-     }
-</style> -->
-
 <div class="w-screen main-container pt-[30px]">
 
     <div class="w-full relative px-[100px]">
 
         <div class="carousel-container">
-            <div class="carousel ">
+            <div class="carousel">
                 @foreach ($books as $book)
-                <div class="slide h-[420px] relative">
+                <div onclick="window.location.href='/info/{{$book->id}}'" class="slide h-[420px] relative cursor-pointer">
                     <div class="absolute top-0 left-0">
                         <img class="h-[340px]" src="/svgs/home/{{$book->img}}.svg" alt="">
                     </div>
@@ -139,3 +102,40 @@
         right: 0;
     }
 </style>
+
+<!-- <div class="Books-carousel f-carousel main-container" id="BooksCarousell">
+    @foreach($books as $book)
+    <div class="f-carousel__slide"><img src="/svgs/home/{{$book->img}}.svg" alt=""></div>
+    @endforeach
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
+<script>
+    new Carousel(document.getElementById("BooksCarousell"));
+</script> -->
+
+<!-- <style>
+     .Books-carousel {
+         --f-carousel-spacing: 10px;
+         width: 100vw;
+         margin-bottom: 0px !important;
+
+         .f-carousel__slide {
+             width: calc((100% - var(--f-carousel-spacing) * 3) / 3);
+             height: 395px;
+             background-color: #EDEDED;
+
+         }
+
+         .f-carousel__dots{
+             display: none;
+         }
+     }
+
+
+     .Books-carousel {
+         .f-button {
+             @apply main-container
+         }
+     }
+</style> -->
