@@ -26,7 +26,7 @@
 
 
     </div>
-    <div class="flex flex-row gap-[30px] h-full items-center p-[15px]">
+    <div class="flex flex-row gap-[30px] h-full items-center py-[15px]">
 
         <p class="font font-medium header-font ">Welcome to My Site</p>
         <p class="font font-medium header-font ">Authorship</p>
