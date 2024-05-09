@@ -155,3 +155,18 @@ input::placeholder {
         @apply border-[blue]
     }
 }
+
+.custom-list {
+    list-style: none;
+    padding-left: 20px;
+
+}
+
+.custom-list li::before {
+    content: "\2022";
+    color: #135D66;
+    font-size: 20px;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}

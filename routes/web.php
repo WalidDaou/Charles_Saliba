@@ -16,6 +16,9 @@ Route::get('/books', [HomeController::class , 'renderbooks']);
 Route::get('/info/{id}', [HomeController::class , 'renderbook']);
 
 
+Route::get('/charles/{id}', [HomeController::class , 'rendercharles']);
+
+
 
 // Route::get('/', [HomeController::class , 'render']);
 

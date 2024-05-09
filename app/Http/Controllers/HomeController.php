@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Authorship;
 use App\Models\Book;
+use App\Models\Charle;
 use App\Models\Journey;
 use App\Models\Video;
 use Illuminate\Http\Request;
@@ -64,5 +65,17 @@ class HomeController extends Controller
 
 
         return view('pages.info-book', ['book' => $book,]);
+    }
+
+    public static function rendercharles($id)
+    {
+
+        $charles = Charle::getCHarles();
+
+        $Previouslys = Charle::getPreviously();
+
+        $expertises = Charle::getExpertises();
+
+        return view('pages.charles-saliba', ['charles' => $charles, 'previouslys' => $Previouslys, 'expertises'  => $expertises,]);
     }
 }

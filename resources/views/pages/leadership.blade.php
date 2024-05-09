@@ -6,7 +6,13 @@
 
 @section('content')
 
-@include('components.leadership.main-image')
+@component('components.leadership.main-image')
+
+<x-slot name="category">leadership/{{$firstLeadership->title}}</x-slot>
+<x-slot name="image">{{$firstLeadership->image}}</x-slot>
+<x-slot name="logo">{{$firstLeadership->logo}}</x-slot>
+
+@endcomponent
 
 @include('components.leadership.articles')
 

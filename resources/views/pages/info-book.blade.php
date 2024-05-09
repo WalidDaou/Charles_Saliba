@@ -8,6 +8,7 @@
 @section('content')
 
 
+@include('components.books.info')
 
 @include('components.home.contact-us')
 
