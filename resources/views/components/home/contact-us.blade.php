@@ -1,4 +1,4 @@
-<div class="pt-[80px]">
+<div class="pt-[60px]">
 
 
     <div class="w-screen main-container h-[300px] flex flex-col gap-[40px] justify-center bg-[#135D66]">

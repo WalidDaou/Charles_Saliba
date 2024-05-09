@@ -34,6 +34,35 @@ class HomeController extends Controller
 
         $articles = Article::getArticles();
 
-        return view('pages.leadership', ['leaderships' => $leaderships, 'firstLeadership' => $firstLeadership , 'articles' => $articles]);
+        return view('pages.leadership', ['leaderships' => $leaderships, 'firstLeadership' => $firstLeadership, 'articles' => $articles]);
+    }
+
+    public static function renderMedia()
+    {
+
+        $videos = Video::paginate(8);
+
+        // $videos = Video::getVideos();
+
+
+        return view('pages.media', ['videos' => $videos,]);
+    }
+
+    public static function renderBooks()
+    {
+
+        $books = Book::paginate(9);
+
+        return view('pages.books', ['books' => $books,]);
+    }
+
+
+    public static function renderBook($id)
+    {
+
+        $book = Book::findOrFail($id);
+
+
+        return view('pages.info-book', ['book' => $book,]);
     }
 }
