@@ -8,7 +8,7 @@
 
 @component('components.leadership.main-image')
 
-<x-slot name="category">leadership/{{$firstLeadership->title}}</x-slot>
+<x-slot name="category">{{$firstLeadership->title}}</x-slot>
 <x-slot name="image">leadership/{{$firstLeadership->image}}</x-slot>
 <x-slot name="logo">{{$firstLeadership->logo}}</x-slot>
 

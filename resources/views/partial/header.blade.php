@@ -28,16 +28,17 @@
 
     <div class="flex flex-row gap-[30px] h-full items-center py-[15px]">
 
-        <a  onclick="scrollToDivWithOffset('mySite', 70)" class="font font-medium header-font cursor-pointer">Welcome to My Site</a>
-        <a href="{{ Request::is('/leadership') ? '#' : url('/leadership') }}" class="font font-medium header-font cursor-pointer">Authorship</a>
-        <a href="{{ Request::is('/media') ? '#' : url('/media') }}" class="font font-medium header-font cursor-pointer">Media</a>
-        <a href="{{ Request::is('/books') ? '#' : url('/books') }}" class="font font-medium header-font cursor-pointer">Books</a>
-        <a onclick="scrollToDivWithOffset('myJourney', 70)" class="font font-medium header-font cursor-pointer">My Journey</a>
-        <a href="/chales" class="font font-medium header-font cursor-pointer">Resume</a>
-        <button onclick="window.location.href='/contact-us'" class="font font-medium header-font h-full text-white bg-[#135D66] w-[150px] hovered" type="submit">Book a Consultation</button>
+        <a onclick="navigateAndScroll('mySite', 70)" class="font font-medium header-font cursor-pointer">Welcome to My Site</a>
+        <a onclick="navigateAndScroll('authorship', 70)" class="font font-medium header-font cursor-pointer">Authorship</a>
+        <a onclick="navigateAndScroll('media', 70)" class="font font-medium header-font cursor-pointer">Media</a>
+        <a onclick="navigateAndScroll('books', 70)" class="font font-medium header-font cursor-pointer">Books</a>
+        <a onclick="navigateAndScroll('myJourney', 70)" class="font font-medium header-font cursor-pointer">My Journey</a>
+        <a onclick="redirectToCharles('resume', 70)" class="font font-medium header-font cursor-pointer">Resume</a>
+        <button onclick="scrollToDivWithOffset('contactUs', 0)" class="font font-medium header-font h-full text-white bg-[#135D66] w-[150px] hovered" type="submit">Book a Consultation</button>
 
     </div>
 </header>
+
 
 <div id="heightDiv" class="w-screen">
 
@@ -58,6 +59,45 @@
                 top: targetOffset,
                 behavior: 'smooth'
             });
+        }
+    }
+
+    function navigateAndScroll(targetId, offset) {
+        // Check if the current location is the homepage
+        if ("{{ Request::path() }}" === '/') {
+            // If it is, directly trigger the scrollToDivWithOffset function
+            scrollToDivWithOffset(targetId, offset);
+        } else {
+            // If not, navigate to the homepage and then trigger the scrollToDivWithOffset function after the page has fully loaded
+
+            // Navigate to the homepage with targetId and offset as URL parameters
+            window.location.href = `{{ url('/') }}?targetId=${targetId}&offset=${offset}`;
+        }
+    }
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Read URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const targetId = urlParams.get('targetId');
+        const offset = parseInt(urlParams.get('offset')) || 0;
+
+        // Log the target ID and offset
+        console.log("Target ID:", targetId);
+        console.log("Offset:", offset);
+
+        if (targetId) {
+            scrollToDivWithOffset(targetId, offset);
+        }
+    });
+
+    function redirectToCharles(targetId, offset) {
+        if (window.location.pathname !== '/') {
+            window.location.href = '/charles';
+        } else if (window.location.pathname === '/') {
+            scrollToDivWithOffset(targetId, offset);
+        } else if (window.location.pathname === '/charles') {
+            console.log('first')
         }
     }
 </script>

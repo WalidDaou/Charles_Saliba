@@ -32,23 +32,29 @@
 
 </div>
 
-@include('components.home.authorship')
+<div id="authorship">
+    @include('components.home.authorship')
+</div>
 
-
-@include('components.home.vision', ['title'=> 'Experience My Creative Vision Through Media' ,'link' => 'media' ])
+<div id="media">
+    @include('components.home.vision', ['title'=> 'Experience My Creative Vision Through Media' ,'link' => 'media' ])
+</div>
 
 
 @include('components.home.video-carousel')
 
-@include('components.home.vision', ['title'=> 'Books That Transform And Inspire' , 'link' => 'books'])
+<div id="books">
+    @include('components.home.vision', ['title'=> 'Books That Transform And Inspire' , 'link' => 'books'])
+</div>
 
 @include('components.home.books-carousel')
 
 @include('components.home.message')
 
 @include('components.home.journey')
-
-@component('components.home.expertise')
+<div id="resume">
+    @component('components.home.expertise')
+</div>
 
 @endcomponent
 

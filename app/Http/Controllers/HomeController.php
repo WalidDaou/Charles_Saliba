@@ -26,12 +26,12 @@ class HomeController extends Controller
         return view('pages.home-page', ['authorships' => $authorships, 'videos' => $videos, 'books' => $books, 'journey' => $journey]);
     }
 
-    public function renderLeadership()
+    public function renderLeadership($id)
     {
 
         $leaderships = Authorship::getAuthorships();
 
-        $firstLeadership = $leaderships[0];
+        $firstLeadership = Authorship::findOrFail($id);
 
         $articles = Article::getArticles();
 

@@ -8,7 +8,7 @@
     <div class="main-container w-full h-[auto] flex flex-row gap-[20px] ">
         @foreach($authorships as $authorship)
 
-        <div class="w-full h-[320px]  flex flex-col " style="box-shadow: 0px 0px 30px #00000012;">
+        <div onclick="window.location.href='/leadership/{{$authorship->id}}'" class="w-full h-[320px]  flex flex-col cursor-pointer" style="box-shadow: 0px 0px 30px #00000012;">
             <div class="flex flex-row gap-[20px] h-[26%] py-[15px] bg-[#135D66] px-[20px] items-center">
                 <div class="w-[55px] h-[55px]">
 

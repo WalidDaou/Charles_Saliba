@@ -1,4 +1,4 @@
-<div class="flex flex-col gap-[20px] w-screen ">
+<div  class="flex flex-col gap-[20px] w-screen ">
 
 
     <div class="horizontal-carousel w-full f-carousel" id="horizontalCarousel">

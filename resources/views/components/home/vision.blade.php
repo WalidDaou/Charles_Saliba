@@ -1,4 +1,4 @@
-<div class="w-screen flex flex-row justify-between pt-[50px] items-center">
+<div class="w-screen flex flex-row justify-between pt-[35px] items-center">
 
 @component('components.title')
 
