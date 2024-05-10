@@ -1,21 +1,21 @@
-<div class="w-screen main-container pt-[30px]">
+<div class="books-carousel w-screen main-container pt-[30px]">
 
-    <div class="w-full relative px-[100px]">
+    <div class="main w-full relative flex flex-col justify-center items-center px-[100px]">
 
         <div class="carousel-container">
             <div class="carousel">
                 @foreach ($books as $book)
                 <div onclick="window.location.href='/info/{{$book->id}}'" class="slide h-[420px] relative cursor-pointer">
-                    <div class="absolute top-0 left-0">
-                        <img class="h-[340px]" src="/svgs/home/{{$book->img}}.svg" alt="">
+                    <div class="img-div absolute top-0 left-0">
+                        <img class="img-book h-[340px]" src="/svgs/home/{{$book->img}}.svg" alt="">
                     </div>
-                    <div class="absolute top-[50%] left-[30%] for-rotation ">
+                    <div class="rotation absolute top-[50%] left-[30%] for-rotation ">
 
                         <div class="relative for-rotation cursor-pointer">
                             <div class="img">
-                                <img class="h-[200px]" src="/svgs/home/second-cross.svg" alt="">
+                                <img class=" logo-img h-[200px]" src="/svgs/home/second-cross.svg" alt="">
                             </div>
-                            <div class="absolute top-[30%] left-[40%]">
+                            <div class="text absolute top-[30%] left-[40%]">
                                 <p class="font font-bold font-20px">Positive Influence</p>
                             </div>
                         </div>
@@ -25,8 +25,10 @@
                 @endforeach
             </div>
         </div>
-        <button class="button button-left" onclick="prevSlide()"><img class="h-[55px] w-[55px]" src="/svgs/home/left.svg" alt=""></button>
-        <button class="button button-right" onclick="nextSlide()"><img class="h-[55px] w-[55px]" src="/svgs/home/right.svg" alt=""></button>
+        <div class="flex flex-row justify-between items-center w-full ">
+            <button class="button button-left" onclick="prevSlide()"><img class="h-[55px] w-[55px]" src="/svgs/home/left.svg" alt=""></button>
+            <button class="button button-right" onclick="nextSlide()"><img class="h-[55px] w-[55px]" src="/svgs/home/right.svg" alt=""></button>
+        </div>
 
     </div>
 </div>
@@ -63,45 +65,7 @@
 </script>
 
 
-<style>
-    .carousel-container {
-        width: 100%;
-        margin: auto;
-        overflow: hidden;
-        position: relative;
-    }
 
-    .carousel {
-        display: flex;
-        transition: transform 0.5s ease;
-    }
-
-    .slide {
-        flex: 1 0 33.33%;
-        /* Display three slides at a time */
-        /* min-width: 300px; */
-        /* Minimum width for each slide */
-    }
-
-    .button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-        padding: 10px;
-        color: white;
-        border: none;
-        outline: none;
-    }
-
-    .button-left {
-        left: 0;
-    }
-
-    .button-right {
-        right: 0;
-    }
-</style>
 
 <!-- <div class="Books-carousel f-carousel main-container" id="BooksCarousell">
     @foreach($books as $book)

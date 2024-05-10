@@ -26,7 +26,7 @@
 
     </div>
 
-    <div class="flex flex-row gap-[30px] h-full items-center py-[15px]">
+    <div class="main-header flex flex-row gap-[30px] h-full items-center py-[15px]">
 
         <a onclick="navigateAndScroll('mySite', 70)" class="font font-medium header-font cursor-pointer">Welcome to My Site</a>
         <a onclick="navigateAndScroll('authorship', 70)" class="font font-medium header-font cursor-pointer">Authorship</a>
@@ -34,10 +34,48 @@
         <a onclick="navigateAndScroll('books', 70)" class="font font-medium header-font cursor-pointer">Books</a>
         <a onclick="navigateAndScroll('myJourney', 70)" class="font font-medium header-font cursor-pointer">My Journey</a>
         <a onclick="redirectToCharles('resume', 70)" class="font font-medium header-font cursor-pointer">Resume</a>
-        <button onclick="scrollToDivWithOffset('contactUs', 0)" class="font font-medium header-font h-full text-white bg-[#135D66] w-[150px] hovered" type="submit">Book a Consultation</button>
+        <button onclick="scrollToDivWithOffset('contactUs', 0)" class="font font-medium hovered" type="submit">Book a Consultation</button>
+
+        <div class="hidden button-header">
+            <svg style=" transform: rotate(180deg);" id="my-svg" class="" width="40px" height="40px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="icon" fill="black" transform="translate(42.666667, 106.666667)">
+                        <path d="M3.55271368e-14,85.3333333 L106.666667,85.3333333 L106.666667,128 L3.55271368e-14,128 L3.55271368e-14,85.3333333 Z M3.55271368e-14,4.26325641e-14 L106.666667,4.26325641e-14 L106.666667,42.6666667 L3.55271368e-14,42.6666667 L3.55271368e-14,4.26325641e-14 Z M3.55271368e-14,170.666667 L106.666667,170.666667 L106.666667,213.333333 L3.55271368e-14,213.333333 L3.55271368e-14,170.666667 Z M3.55271368e-14,256 L106.666667,256 L106.666667,298.666667 L3.55271368e-14,298.666667 L3.55271368e-14,256 Z M149.333333,85.3333333 L426.666667,85.3333333 L426.666667,128 L149.333333,128 L149.333333,85.3333333 Z M149.333333,4.26325641e-14 L426.666667,4.26325641e-14 L426.666667,42.6666667 L149.333333,42.6666667 L149.333333,4.26325641e-14 Z M149.333333,170.666667 L426.666667,170.666667 L426.666667,213.333333 L149.333333,213.333333 L149.333333,170.666667 Z M149.333333,256 L426.666667,256 L426.666667,298.666667 L149.333333,298.666667 L149.333333,256 Z" id="Combined-Shape">
+                        </path>
+                    </g>
+                </g>
+            </svg>
+        </div>
 
     </div>
 </header>
+
+<div class="phone-header hidden w-screen fixed top-[70px] left-[0%] z-[1050] h-[fit-content] bg-white flex-col justify-center items-center gap-[20px] container-padding pt-[25px] pb-[25px]" style="transition: opacity 0.4s ease;">
+    <div class="div-seacond cursor-pointer">
+        <a onclick=" navigateAndScroll('mySite', 70) ; closePhoneHeader();" class="font font-medium header-font">Welcome to My Site</a>
+    </div>
+    <div class="div-seacond cursor-pointer">
+        <a onclick=" navigateAndScroll('authorship', 70) ; closePhoneHeader();" class="font font-medium header-font">Authorship</a>
+    </div>
+    <div class="div-seacond cursor-pointer">
+        <a onclick=" navigateAndScroll('media', 70) ; closePhoneHeader();" class="font font-medium header-font">Media</a>
+    </div>
+    <div class="div-seacond cursor-pointer">
+        <a onclick=" navigateAndScroll('books', 70) ; closePhoneHeader();" class="font font-medium header-font">Books</a>
+    </div>
+    <div class="div-seacond cursor-pointer">
+        <a onclick=" navigateAndScroll('myJourney', 70) ; closePhoneHeader();" class="font font-medium header-font">My Journey</a>
+    </div>
+    <div class="div-seacond cursor-pointer">
+        <a onclick=" redirectToCharles('resume', 70) ; closePhoneHeader();" class="font font-medium header-font">Resume</a>
+    </div>
+    <button onclick=" scrollToDivWithOffset('contactUs', 0) ; closePhoneHeader();" class="font font-medium hovered" type="submit">
+        Book a Consultation
+    </button>
+</div>
+
+
+
 
 
 <div id="heightDiv" class="w-screen">
@@ -99,5 +137,17 @@
         } else if (window.location.pathname === '/charles') {
             console.log('first')
         }
+    }
+
+    document.querySelector('.button-header').addEventListener('click', function() {
+        var phoneHeader = document.querySelector('.phone-header');
+        phoneHeader.classList.toggle('show-header');
+    });
+
+    function closePhoneHeader() {
+        var phoneHeader = document.querySelector('.phone-header');
+         phoneHeader.classList.toggle('show-header');
+
+
     }
 </script>

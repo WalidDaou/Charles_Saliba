@@ -11,7 +11,7 @@
             <div class="absolute w-full h-full top-0 left-0 justify-center items-center flex">
                 <img src="/svgs/home/play-video.svg" alt="">
             </div>
-            <div class="absolute ml-[10px] mb-[20px] bottom-[0%] left-0 w-[220px] h-[28px] bg-[#EBEBEB] flex justify-center items-center ">
+            <div class="text-holder absolute ml-[10px] mb-[20px] bottom-[0%] left-0 min-w-[220px] h-[28px] bg-[#EBEBEB] flex justify-center items-center ">
 
                 <p class="font font-medium font-12px">
                     {{$video->title}}
@@ -35,7 +35,7 @@
             <div class="absolute w-full h-full top-0 left-0 justify-center items-center flex">
                 <img src="/svgs/home/play-video.svg" alt="">
             </div>
-            <div class="absolute ml-[10px] mb-[20px] bottom-[0%] left-0 w-[220px] h-[28px] bg-[#EBEBEB] flex justify-center items-center ">
+            <div class="text-holder absolute ml-[10px] mb-[20px] bottom-[0%] left-0 w-[220px] h-[28px] bg-[#EBEBEB] flex justify-center items-center ">
 
                 <p class="font font-medium font-12px">
                     {{$video->title}}
@@ -78,56 +78,3 @@
     });
 </script>
 
-<style>
-    .horizontal-carousel {
-
-        height: fit-content;
-        --f-carousel-spacing: 15px;
-        margin-bottom: 0px !important;
-
-        .f-carousel__slide {
-            width: calc((100% - var(--f-carousel-spacing) * 3) / 3);
-
-
-            height: 250px;
-
-        }
-
-        .f-carousel__nav button {
-            display: none !important;
-        }
-
-        .f-carousel__dots {
-            display: none;
-        }
-    }
-
-    .horizontal-carousel-2 {
-        margin: auto;
-        height: fit-content;
-        --f-carousel-spacing: 15px;
-        margin-bottom: 0px !important;
-
-        .f-carousel__slide {
-            width: 35%;
-
-            height: 250px;
-
-        }
-
-        .f-carousel__track {
-
-            transform: translateX(-100%);
-
-        }
-
-
-        .f-carousel__nav button {
-            display: none !important;
-        }
-
-        .f-carousel__dots {
-            display: none;
-        }
-    }
-</style>

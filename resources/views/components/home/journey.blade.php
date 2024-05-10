@@ -15,12 +15,12 @@
         <div id="bigContainer" class="relative mt-[50px]">
 
 
-            <div id="smallContainer" class="cursor-grab  flex flex-row w-screen overflow-x-scroll absolute top-0 left-0 z-[10]">
+            <div id="smallContainer" class="cursor-grab main-container flex flex-row w-screen overflow-x-scroll absolute top-0 left-0 z-[10]">
 
 
                 @foreach($journey as $index => $item)
                 @if($index % 2 == 0)
-                <div id="div_{{$index}}" class="main-container-left flex flex-row gap-[20px] h-[150px] justify-start items-start">
+                <div id="div_{{$index}}" class=" flex flex-row gap-[20px] h-[150px] justify-start items-start">
                     <div class="flex flex-col gap-[5px] justify-center items-center h-full">
                         <div class="w-[25px] h-[25px] flex justify-center items-center relative">
                             <img class="w-full h-full" src="/svgs/home/journay-white.svg" alt="">
@@ -38,7 +38,7 @@
                         <p class="font font-semibold font-18px text-[#135D66]">
                             {{ $item->date }}
                         </p>
-                        <p class="font font-normal font-16px min-w-[200px] max-w-[280px] pr-[30px]">
+                        <p class="journey-width font font-normal font-16px min-w-[200px] max-w-[280px] pr-[30px]">
                             {{ $item->content }}
                         </p>
                     </div>
@@ -46,7 +46,7 @@
                 </div>
 
                 @else
-                <div id="div_{{$index}}" class="main-container-left flex flex-row gap-[20px] h-[300px] mt-[140px] justify-start items-start">
+                <div id="div_{{$index}}" class="main-container-right flex flex-row gap-[20px] h-[300px] mt-[140px] justify-start items-start">
                     <div class="flex flex-col gap-[5px] justify-center items-center h-[150px]">
 
                         <div>
@@ -66,7 +66,7 @@
                         <p class="font font-semibold font-18px text-[red]">
                             {{ $item->date }}
                         </p>
-                        <p class="font font-normal font-16px min-w-[200px] max-w-[280px] pr-[30px]">
+                        <p class="journey-width font font-normal font-16px min-w-[200px] max-w-[280px] pr-[30px]">
                             {{ $item->content }}
                         </p>
                     </div>
