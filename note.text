@@ -1,0 +1,25 @@
+these comande to automatically generate defined migration :
+
+
+__composer require --dev --with-all-dependencies --update-with-dependencies orangehill/iseed doctrine/dbal
+
+
+__php artisan migrate:generate
+
+//_________________________
+
+- these comade to generate seeds from the tables :
+
+__composer require --dev orangehill/iseed
+
+__php artisan iseed (table name)
+
+
+//_________________________
+
+this for making where the images will be storages :
+
+__php artisan storage:link
+
+
+=============================

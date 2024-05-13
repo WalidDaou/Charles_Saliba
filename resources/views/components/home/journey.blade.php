@@ -15,7 +15,7 @@
         <div id="bigContainer" class="relative mt-[50px]">
 
 
-            <div id="smallContainer" class="cursor-grab main-container flex flex-row w-screen overflow-x-scroll absolute top-0 left-0 z-[10]">
+            <div id="smallContainer" class="journey-scroll cursor-grab main-container flex flex-row w-screen overflow-x-scroll absolute top-0 left-0 z-[10]">
 
 
                 @foreach($journey as $index => $item)

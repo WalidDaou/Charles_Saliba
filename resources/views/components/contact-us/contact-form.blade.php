@@ -1,6 +1,5 @@
-<div x-data class="contact w-screen main-container bg-[transparent] pb-[30px] pt-[40px] gap-[80px] flex flex-row">
+<div class="contact w-screen main-container bg-[transparent] pb-[30px] pt-[40px] gap-[80px] flex flex-row">
 
-    <!-- @submit.prevent="$store.appData.submitted=true" onsubmit="event.preventDefault();" -->
     <form method="POST" action="{{ route('contact.submit') }}" class="contact-form w-[60%] h-full flex flex-col gap-[20px]">
         @csrf
 
@@ -45,30 +44,9 @@
     </form>
 
 
-
-
-
-
-
 </div>
 
 
-
-<style>
-    .contact {
-
-        .hover-button {
-
-            background-color: #7F2854;
-
-            &:hover {
-
-                background-color: #A7A9AC;
-
-            }
-        }
-    }
-</style>
 
 
 <script>
@@ -80,4 +58,3 @@
         });
     });
 </script>
-
