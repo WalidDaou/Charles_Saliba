@@ -91,7 +91,7 @@ class HomeController extends Controller
     }
 
     public function PostContact(Request $request)
-    
+
     {
         // Validate the incoming request data
         $validator = Validator::make($request->all(), [
@@ -111,9 +111,9 @@ class HomeController extends Controller
         }
 
         // Create a new contact detail using the validated data
-        $contactDetail = ContactDetail::create($validator->validated());
+         ContactDetail::create($validator->validated());
 
         // If successful, return a success response
-        return redirect('/');
+        return redirect('/contact-us');
     }
 }
