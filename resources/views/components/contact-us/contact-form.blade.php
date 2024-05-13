@@ -1,7 +1,7 @@
 <div x-data class="contact w-screen main-container bg-[transparent] pb-[30px] pt-[40px] gap-[80px] flex flex-row">
 
     <!-- @submit.prevent="$store.appData.submitted=true" onsubmit="event.preventDefault();" -->
-    <form method="POST" action="" class="contact-form w-[60%] h-full flex flex-col gap-[20px]">
+    <form method="POST" action="{{ route('contact.submit') }}" class="contact-form w-[60%] h-full flex flex-col gap-[20px]">
         @csrf
 
         <div class="w-full flex flex-col gap-[15px]">

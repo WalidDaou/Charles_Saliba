@@ -6,8 +6,13 @@ use App\Models\Article;
 use App\Models\Authorship;
 use App\Models\Book;
 use App\Models\Charle;
+use App\Models\ContactDetail;
 use App\Models\Journey;
 use App\Models\Video;
+
+
+
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -83,5 +88,32 @@ class HomeController extends Controller
     {
 
         return view('pages.contact-us');
+    }
+
+    public function PostContact(Request $request)
+    
+    {
+        // Validate the incoming request data
+        $validator = Validator::make($request->all(), [
+            'first_name' => 'required|string',
+            'last_name' => 'required|string',
+            'email' => 'required|email',
+            'phone' => 'required|numeric',
+            'subject' => 'required|string',
+            'message' => 'nullable|string',
+           
+        ]);
+
+        // Check if the validation fails
+        if ($validator->fails()) {
+            // Return a JSON response with validation errors
+            return response()->json(['success' => false, 'errors' => $validator->errors()], 422);
+        }
+
+        // Create a new contact detail using the validated data
+        $contactDetail = ContactDetail::create($validator->validated());
+
+        // If successful, return a success response
+        return redirect('/');
     }
 }
