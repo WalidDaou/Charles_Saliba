@@ -1,20 +1,20 @@
-<div class="h-full main-container  grid gap-[0px]" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
+<div class="books-page h-full main-container  grid gap-[0px]" >
 
 
 
     @foreach ($books as $book)
 
-    <div onclick="window.location.href='/info/{{$book->id}}'" class="h-[420px] w-[400px] relative cursor-pointer">
-        <div class="absolute top-0 left-0">
+    <div onclick="window.location.href='/info/{{$book->id}}'" class="book-div h-[420px] w-full relative cursor-pointer">
+        <div class="book-img flex w-full h-full absolute top-0 left-0">
             <img class="h-[340px]" src="/svgs/home/{{$book->img}}.svg" alt="">
         </div>
-        <div class="absolute top-[50%] left-[30%] for-rotation ">
+        <div class="the-x flex  absolute top-[50%] left-[30%] for-rotation ">
 
             <div class="relative for-rotation cursor-pointer">
                 <div class="img">
                     <img class="h-[200px]" src="/svgs/home/second-cross.svg" alt="">
                 </div>
-                <div class="absolute top-[30%] left-[40%]">
+                <div class=" absolute top-[30%] left-[40%]">
                     <p class="font font-bold font-20px">Positive Influence</p>
                 </div>
             </div>

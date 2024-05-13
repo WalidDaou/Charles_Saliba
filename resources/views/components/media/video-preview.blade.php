@@ -1,9 +1,9 @@
-<div class="h-full main-container  grid grid-cols-2 gap-[15px]">
+<div class="media-page h-full main-container  grid grid-cols-2 gap-[15px]">
 
 
 
     @foreach ($videos as $video)
-    <div class="h-[50vh] relative background" style="background-image:url('/images/home/{{$video->image_path}}.jpg');">
+    <div class="video h-[50vh] relative background" style="background-image:url('/images/home/{{$video->image_path}}.jpg');">
 
         <div class="bg-black opacity-[0.4] h-full w-full absolute top-0 left-0">
         </div>
@@ -11,7 +11,7 @@
         <div class="absolute w-full h-full top-0 left-0 justify-center items-center flex">
             <img src="/svgs/home/play-video.svg" alt="">
         </div>
-        <div class="absolute ml-[10px] mb-[20px] bottom-[0%] left-0 w-[220px] h-[28px] bg-[#EBEBEB] flex justify-center items-center ">
+        <div class="text-video absolute ml-[10px] mb-[20px] bottom-[0%] left-0 min-w-[220px] h-[28px] bg-[#EBEBEB] flex justify-center items-center ">
 
             <p class="font font-medium font-12px">
                 {{$video->title}}

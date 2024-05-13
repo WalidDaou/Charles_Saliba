@@ -163,7 +163,7 @@ header {
         @apply text-[#135D66] border-[#135D66]
     }
 
-    .button:hover {
+    .button-articale:hover {
         @apply border-[blue]
     }
 }
@@ -297,6 +297,15 @@ header {
     }
 }
 
+.px-50px {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.books-page {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+
 @media(max-width : 1200px) {
 
 
@@ -321,7 +330,18 @@ header {
         }
     }
 
+    .resume-container {
+        align-items: center;
 
+        .text-resume {
+            top: 30%;
+            left: 50%;
+        }
+
+        .circile {
+            left: 50%;
+        }
+    }
 }
 
 @media(max-width : 1100px) {
@@ -341,7 +361,7 @@ header {
     }
 
     .hovered {
-        @apply font w-[100px] h-[30px] bg-[#135D66] text-white font-10px
+        @apply font w-[105px] h-[30px] bg-[#135D66] text-white font-10px
     }
 
     .font-16px {
@@ -422,6 +442,15 @@ header {
     .message {
         @apply pt-[80px]
     }
+
+    .contact-form {
+        width: 80%;
+    }
+
+    .contact-infoz {
+        width: 100%;
+    }
+
 }
 
 @media screen and (max-width: 900px) {
@@ -433,6 +462,57 @@ header {
         .content {
             max-width: 80vw;
         }
+    }
+
+    .resume-container {
+
+        height: 65vh;
+
+        .text-resume {
+            top: 30%;
+            left: 0;
+        }
+
+        .circile {
+            left: 10%;
+            width: 300px;
+            height: 300px;
+        }
+
+        .charles {
+            display: none;
+        }
+    }
+
+    .article-container {
+        flex-direction: column;
+        height: fit-content;
+
+        .left-article {
+            width: 100%;
+        }
+
+        .right-article {
+            width: 100%;
+            flex-direction: row;
+
+            .title-article {
+
+                img {
+                    min-width: 35px;
+                }
+            }
+
+            .infos {
+                gap: 15px;
+
+                img {
+                    min-width: 15px;
+                }
+            }
+
+        }
+
     }
 }
 
@@ -486,6 +566,32 @@ header {
         }
     }
 
+    .books-page {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 10px;
+
+        .the-x {
+
+            img {
+                height: 160px;
+            }
+        }
+    }
+
+    .previously-text {
+        min-width: 80px;
+    }
+
+}
+
+@media(max-width:750px) {
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-infoz {
+        width: 100%;
+    }
 }
 
 @media(max-width:700px) {
@@ -597,9 +703,68 @@ header {
     .font-40px {
         font-size: 25px;
     }
+
+    .previously-text {
+        min-width: fit-content;
+    }
+}
+
+
+@media(max-width:650px) {
+    .article-container {
+
+        .left-article {
+            .download {
+                width: 130px;
+            }
+
+            .date-article {
+                min-width: 57px;
+            }
+        }
+
+        .right-article {
+            width: 100%;
+            flex-direction: column;
+
+            .title-article {
+
+                img {
+                    min-width: 35px;
+                }
+            }
+
+            .infos {
+                gap: 15px;
+
+                img {
+                    min-width: 15px;
+                }
+            }
+
+        }
+
+    }
+
+    .media-page {
+
+        .video {
+            height: 40vh;
+        }
+
+        .text-video {
+            min-width: 180px;
+        }
+
+    }
+
+    .contact-infoz {
+        flex-direction: column;
+    }
 }
 
 @media(max-width:600px) {
+
     .books-carousel {
         .main {
             @apply px-[70px]
@@ -612,6 +777,92 @@ header {
         font-size: 22px;
     }
 
+    .margin-contact {
+        margin-top: 45px;
+    }
+
+    .article-container {
+
+        .left-article {
+            .download {
+                width: 40px;
+
+                .text-dow {
+                    display: none;
+                }
+            }
+
+        }
+
+        .right-article {
+            width: 100%;
+            flex-direction: column;
+
+            .title-article {
+
+                img {
+                    min-width: 35px;
+                }
+            }
+
+            .infos {
+                gap: 15px;
+
+                img {
+                    min-width: 15px;
+                }
+            }
+
+        }
+
+    }
+
+    .px-50px {
+        padding-right: 35px;
+        padding-left: 35px;
+    }
+
+    .infos-book {
+        flex-direction: column;
+        height: fit-content;
+        padding-top: 20px;
+
+        .the-left {
+            width: 100%;
+        }
+
+        .the-right {
+            width: 100%;
+        }
+
+    }
+
+    .charles-container {
+        flex-direction: column;
+        gap: 25px;
+
+        .charles-right {
+            width: 100%;
+        }
+
+        .charles-left {
+            width: 100%;
+        }
+
+        .functional-container {
+
+            gap: 10px;
+
+            .left-f {
+                width: 100%;
+            }
+
+            .right-f {
+                width: 100%;
+            }
+        }
+
+    }
 
 }
 
@@ -723,22 +974,56 @@ header {
 
     }
 
-    .horizontal-carousel {
-        .text-holder {
-            min-width: 180px;
-        }
+
+    .text-holder {
+        min-width: 180px;
     }
 
-    .horizontal-carousel-2 {
-        .text-holder {
-            min-width: 180px;
-        }
-    }
 
-    .journey-width{
-        min-width: 140px ;
+    .journey-width {
+        min-width: 130px;
         padding-right: 0px;
     }
+
+    .media-page {
+
+        .video {
+            height: 40vh;
+        }
+
+        .text-video {
+            min-width: 170px;
+        }
+
+    }
+
+    .books-page {
+        grid-template-columns: minmax(0, 1fr);
+
+
+        .book-div {
+            height: 380px;
+        }
+
+        .book-img {
+            // justify-content: center;
+        }
+
+        .the-x {
+            // justify-content: center;
+            left: 60%;
+            top: 30%;
+
+            img {
+                // height: 220px;
+            }
+        }
+    }
+
+    .boxe {
+        padding-left: 10px;
+    }
+
 
 }
 
@@ -807,6 +1092,43 @@ header {
         @apply main-container
     }
 
+    .article-container {
+
+        .left-article {
+
+            .text-container {
+                gap: 10px;
+            }
+
+            .download {
+                width: 30px;
+            }
+        }
+    }
+
+    .media-page {
+
+        grid-template-columns: 1fr;
+
+        .video {
+            height: 40vh;
+        }
+
+        .text-video {
+            min-width: 220px;
+        }
+
+    }
+
+    .contact-form {
+
+
+        .form-inputs {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+
 }
 
 @media(max-width: 400px) {
@@ -859,6 +1181,52 @@ header {
 
     }
 
+    .resume-container {
+
+        .text-resume {
+            top: 30%;
+            left: 0;
+        }
+
+        .circile {
+            width: 200px;
+            height: 200px;
+        }
+
+
+    }
+
+    .margin-contact {
+        margin-top: 20px;
+    }
+
+    .px-50px {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .article-container {
+
+        .left-article {
+
+            .text-container {
+                gap: 8px;
+            }
+
+        }
+
+
+
+    }
+
+    .infos-book {
+        padding-top: 20px;
+
+        .the-left {
+            padding-top: 0px;
+        }
+    }
+
 }
 
 @media(max-width:380px) {
@@ -870,5 +1238,11 @@ header {
 @media(max-width:350px) {
     .main-title-container {
         min-height: 70vh;
+
     }
+
+    .authorship {
+        padding-top: 40px;
+    }
+
 }

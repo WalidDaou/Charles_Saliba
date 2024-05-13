@@ -1,10 +1,10 @@
-<div class="flex flex-row gap-[60px] w-screen main-container h-[620px] pt-[50px]">
+<div class="infos-book flex flex-row  gap-[60px] w-screen main-container h-[620px] pt-[50px]">
 
-    <div class="w-[50%] h-full flex justify-center pt-[60px] ">
+    <div class="the-left w-[50%] h-full flex justify-center pt-[60px] ">
         <img class="h-[450px]" src="/svgs/home/{{$book->img}}.svg" alt="">
     </div>
 
-    <div class="w-[50%] h-full fex flex-col">
+    <div class="the-right w-[50%] h-full fex flex-col">
 
         <div>
             <p class="font font-40px font-bold ">Positive Influence</p>

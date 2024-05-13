@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class , 'render']);
 
-Route::get('/leadership/{id}', [HomeController::class , 'renderLeadership']);
+Route::get('/authorship/{id}', [HomeController::class , 'renderLeadership']);
 
 Route::get('/media', [HomeController::class , 'renderMedia']);
 

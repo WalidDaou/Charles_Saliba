@@ -53,11 +53,14 @@
 @include('components.home.message')
 
 @include('components.home.journey')
+
+
 <div id="resume">
     @component('components.home.expertise')
+
+    @endcomponent
 </div>
 
-@endcomponent
 
 @include('components.home.contact-us')
 

@@ -100,7 +100,9 @@
         // Set the same height to the bigContainer element
         var bigContainer = document.getElementById('bigContainer');
         bigContainer.style.height = smallContainerHeight + 'px';
+
     });
+
 
 
 
@@ -145,8 +147,17 @@
         scrollRightButton.addEventListener('click', function() {
             scrollRight();
         });
+
+        window.addEventListener('resize', function() {
+            // Update screenWidth when the window is resized
+            screenWidth = (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) / 2;
+        });
+
+        
     });
 
+
+    // this part for making the smallContainer scroll by grabing ____________________
 
     document.addEventListener("DOMContentLoaded", function() {
 
@@ -195,4 +206,7 @@
             myDiv.style.cursor = 'grab';
         });
     });
+
+
+    // ____________________________________________________________________________
 </script>

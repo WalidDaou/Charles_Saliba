@@ -1,4 +1,4 @@
-<div id="contactUs" class="mt-[60px]">
+<div id="contactUs" class="mt-[60px] margin-contact">
 
 
     <div class="w-screen main-container h-[300px] flex flex-col gap-[40px] justify-center bg-[#135D66]">
