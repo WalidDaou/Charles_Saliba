@@ -313,6 +313,61 @@ header {
     user-select: none;
 }
 
+// animation _______________________________________________
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(calc(-100% + 100vw));
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+.slide-animation {
+    animation: slide 30s infinite linear;
+}
+
+.slide-animation:hover {
+    /* animation-play-state: paused; */
+    // animation-duration: 40s,
+
+}
+
+@keyframes slide-2 {
+    0% {
+        transform: translateX(calc(-100% + 100vw));
+        /* Start from the end */
+    }
+
+    50% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(calc(-100% + 100vw));
+        /* Return to the end */
+    }
+}
+
+.slide-animation-2 {
+    animation: slide-2 30s infinite linear;
+}
+
+/* Pause animation on hover */
+.slide-animation-2:hover {
+    /* animation-play-state: paused; */
+    // animation-duration: 40s,
+}
+
+
+// end-animation _______________________________________________
+
+
 @media(max-width : 1200px) {
 
 
@@ -714,6 +769,19 @@ header {
     .previously-text {
         min-width: fit-content;
     }
+
+    .video-animated {
+
+        .video-slide {
+            width: 300px;
+            height: 180px;
+        }
+
+        .text {
+            width: 200px;
+        }
+
+    }
 }
 
 
@@ -767,6 +835,10 @@ header {
 
     .contact-infoz {
         flex-direction: column;
+    }
+
+    .vision {
+        padding-top: 25px;
     }
 }
 
@@ -1031,6 +1103,28 @@ header {
         padding-left: 10px;
     }
 
+    .slide-animation {
+        animation: slide 40s infinite linear;
+    }
+
+    .slide-animation:hover {
+        /* animation-play-state: paused; */
+        // animation-duration: 40s,
+
+    }
+
+    .slide-animation-2 {
+        animation: slide-2 40s infinite linear;
+    }
+
+    /* Pause animation on hover */
+    .slide-animation-2:hover {
+        /* animation-play-state: paused; */
+        // animation-duration: 40s,
+    }
+    .vision {
+        padding-top: 15px;
+    }
 
 }
 
@@ -1222,8 +1316,6 @@ header {
 
         }
 
-
-
     }
 
     .infos-book {
@@ -1234,11 +1326,20 @@ header {
         }
     }
 
+    .authorship {
+        padding-top: 5px;
+    }
+    .vision {
+        padding-top: 0px;
+    }
 }
 
 @media(max-width:380px) {
     .font-40px {
         font-size: 15px;
+    }
+    .authorship {
+        padding-top: 30px;
     }
 }
 
@@ -1248,8 +1349,6 @@ header {
 
     }
 
-    .authorship {
-        padding-top: 40px;
-    }
+
 
 }

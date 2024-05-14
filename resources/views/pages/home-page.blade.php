@@ -42,7 +42,9 @@
 </div>
 
 
-@include('components.home.video-carousel')
+<!-- @include('components.home.video-carousel') -->
+
+@include('components.home.video-animation')
 
 <div id="books">
     @include('components.home.vision', ['title'=> 'Books That Transform And Inspire' , 'link' => 'books'])

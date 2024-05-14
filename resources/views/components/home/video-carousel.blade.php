@@ -1,4 +1,4 @@
-<div  class="flex flex-col gap-[20px] w-screen ">
+<div class="flex flex-col gap-[20px] w-screen ">
 
 
     <div class="horizontal-carousel w-full f-carousel" id="horizontalCarousel">
@@ -68,8 +68,13 @@
     const options_2 = {
         Autoplay: {
             autoStart: true, // Autoplay starts automatically after initialization
-            timeout: 600,
-
+            timeout: 1000,
+            // playSpeed: 1000,
+            // autoPlay: true,
+            direction: {
+                next: 'right',
+                prev: 'left'
+            }
         },
     };
 
@@ -77,4 +82,3 @@
         Autoplay
     });
 </script>
-

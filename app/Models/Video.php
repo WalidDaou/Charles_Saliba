@@ -44,6 +44,12 @@ class Video extends Model
                 'video_path' => '',
                 'image_path'=> 'video-5',
             ],
+            (object)[
+                'id' => '6',
+                'title' => 'Name Of The Video Goes Here',
+                'video_path' => '',
+                'image_path'=> 'video-4',
+            ],
         ];
 
         return $videos ;
