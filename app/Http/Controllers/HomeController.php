@@ -22,9 +22,14 @@ class HomeController extends Controller
 
         $authorships = Authorship::getAuthorships();
 
-        $videos = Video::getVideos();
+        $videos = Video::get();
 
-        $books = Book::getBooks();
+        // $videos = Video::getVideos();
+
+
+        // $books = Book::getBooks();
+
+        $books = Book::get();
 
         $journey = Journey::getJournays();
 
@@ -93,27 +98,13 @@ class HomeController extends Controller
     public function PostContact(Request $request)
 
     {
-        // Validate the incoming request data
-        $validator = Validator::make($request->all(), [
-            'first_name' => 'required|string',
-            'last_name' => 'required|string',
-            'email' => 'required|email',
-            'phone' => 'required|numeric',
-            'subject' => 'required|string',
-            'message' => 'nullable|string',
-           
-        ]);
 
-        // Check if the validation fails
-        if ($validator->fails()) {
-            // Return a JSON response with validation errors
-            return response()->json(['success' => false, 'errors' => $validator->errors()], 422);
+        $result = ContactDetail::storeContact($request->all());
+
+        if ($result['success']) {
+            return redirect('/')->with('success', 'Contact details submitted successfully.');
+        } else {
+            return response()->json(['success' => false, 'errors' => $result['errors']], 422);
         }
-
-        // Create a new contact detail using the validated data
-         ContactDetail::create($validator->validated());
-
-        // If successful, return a success response
-        return redirect('/contact-us');
     }
 }

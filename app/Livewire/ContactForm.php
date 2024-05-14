@@ -23,30 +23,28 @@ class ContactForm extends Component
         'subject' => 'required',
     ];
 
+
+    
     public function submitForm()
     {
         $validatedData = $this->validate();
 
         ContactDetail::create($validatedData);
 
-        // Optionally, you can emit an event here to notify the parent component or redirect the user.
-
-        
-
         session()->flash('message', 'Contact details submitted successfully.');
 
-        $this->resetFormFields();
+        $this->reset([
+            'first_name',
+            'last_name',
+            'email',
+            'phone',
+            'subject',
+            'message',
+        ]);
     }
 
-    private function resetFormFields()
-    {
-        $this->first_name = '';
-        $this->last_name = '';
-        $this->email = '';
-        $this->phone = '';
-        $this->subject = '';
-        $this->message = '';
-    }
+
+
 
     public function render()
     {

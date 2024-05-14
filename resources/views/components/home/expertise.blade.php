@@ -10,7 +10,6 @@
         <button onclick="window.location.href='/charles'" class="hovered">View Full Resume</button>
     </div>
 
-
     <div class="charles background rounded-[50%] w-[400px] h-[400px] overflow-hidden" style="background-image: url('/images/home/video-3.jpg');">
         <div class="w-full h-full bg-black opacity-[0.2]"></div>
     </div>

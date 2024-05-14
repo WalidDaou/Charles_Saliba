@@ -21,7 +21,7 @@
                 </div>
                 <div class="w-full flex flex-col gap-[5px]">
                     <label for="phone" class="font-12px font font-normal">Phone Number</label>
-                    <input placeholder="Phone Number" class=" input-2 text-[13px] h-[35px] border-[1px] border-collapse px-[10px]" type="number" name="phone" id="phone" required>
+                    <input placeholder="Phone Number" class="w-full input-2 text-[13px] h-[35px] border-[1px] border-collapse px-[10px]" type="number" name="phone" id="phone" required>
                 </div>
             </div>
             <div class="flex flex-row gap-[30px] w-full">
@@ -43,13 +43,35 @@
         </div>
     </form>
 
+    <!-- <livewire:contact-form /> -->
+
 
 </div>
 
 
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.js"></script>
 <script>
+    // Initialize intlTelInput
+    var input = document.querySelector("#phone");
+    var iti = window.intlTelInput(input, {
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js",
+        initialCountry: "auto",
+        separateDialCode: true,
+        placeholderNumberType: "MOBILE",
+        geoIpLookup: function(callback) {
+            // Replace this with your own implementation of GeoIP lookup if needed
+            fetch('https://ipinfo.io/json?token=YOUR_TOKEN')
+                .then(response => response.json())
+                .then(data => {
+                    var countryCode = (data && data.country) ? data.country : "";
+                    callback(countryCode);
+                })
+                .catch(() => {
+                    callback("US"); // Fallback to default country code
+                });
+        }
+    });
+
     document.addEventListener("DOMContentLoaded", function() {
         const form = document.querySelector('form');
         form.addEventListener('submit', function(e) {
