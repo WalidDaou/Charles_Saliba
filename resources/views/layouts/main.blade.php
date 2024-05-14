@@ -23,6 +23,8 @@
 
 <body>
 
+
+
     @include('partial.header')
 
     @yield("content")
