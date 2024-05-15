@@ -21,7 +21,8 @@
                 </div>
                 <div class="w-full flex flex-col gap-[5px]">
                     <label for="phone" class="font-12px font font-normal">Phone Number</label>
-                    <input placeholder="Phone Number" class="w-full input-2 text-[13px] h-[35px] border-[1px] border-collapse px-[10px]" type="number" name="phone" id="phone" required>
+                    <input placeholder="Phone Number" class="w-full input-2 text-[13px] h-[35px] border-[1px] border-collapse px-[10px]" type="tel" name="phone" id="phone" pattern="[0-9+]*" title="Please enter a valid phone number" required oninput="this.value = this.value.replace(/[^0-9+]/g, '');">
+
                 </div>
             </div>
             <div class="flex flex-row gap-[30px] w-full">
@@ -33,7 +34,7 @@
             <div class="flex flex-row gap-[30px] w-full">
                 <div class="w-full flex flex-col gap-[5px]">
                     <label for="message" class="font-12px font font-normal">Message</label>
-                    <textarea placeholder="Enter your message here" class="text-[13px] h-[80px] border-[1px] border-collapse px-[10px]" name="message" id="message"></textarea>
+                    <textarea placeholder="Enter your message here" class="text-[13px] h-[80px] border-[1px] border-collapse px-[10px] resize-none" name="message" id="message"></textarea>
                 </div>
             </div>
 
@@ -49,7 +50,6 @@
 </div>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.js"></script>
 <script>
     // Initialize intlTelInput
     var input = document.querySelector("#phone");
@@ -72,11 +72,10 @@
         }
     });
 
-    document.addEventListener("DOMContentLoaded", function() {
-        const form = document.querySelector('form');
-        form.addEventListener('submit', function(e) {
-            alert("Form submitted successfully!")
-
+    document.addEventListener('livewire:load', function() {
+        Livewire.on('formSubmitted', function() {
+            document.querySelector('.contact-form').reset();
+            alert('Form submitted successfully!');
         });
     });
 </script>

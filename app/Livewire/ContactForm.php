@@ -24,7 +24,7 @@ class ContactForm extends Component
     ];
 
 
-    
+
     public function submitForm()
     {
         $validatedData = $this->validate();
@@ -33,16 +33,42 @@ class ContactForm extends Component
 
         session()->flash('message', 'Contact details submitted successfully.');
 
-        $this->reset([
-            'first_name',
-            'last_name',
-            'email',
-            'phone',
-            'subject',
-            'message',
-        ]);
+        // $this->reset();
+
+        $this->resetFields();
+
+        $this->dispatch('formSubmitted');
+
+        // $this->reset([
+        //     'first_name',
+        //     'last_name',
+        //     'email',
+        //     'phone',
+        //     'subject',
+        //     'message',
+        // ]);
+
+        // $this->first_name = "";
+        // $this->last_name = "";
+        // $this->email = "";
+        // $this->phone = "";
+        // $this->subject = "";
+        // $this->message = "";
+
+        // $this->resetForm();
+
     }
 
+
+    private function resetFields()
+    {
+        $this->first_name = '';
+        $this->last_name = '';
+        $this->email = '';
+        $this->phone = '';
+        $this->subject = '';
+        $this->message = '';
+    }
 
 
 
