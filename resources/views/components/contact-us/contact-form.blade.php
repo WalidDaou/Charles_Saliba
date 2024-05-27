@@ -44,7 +44,6 @@
         </div>
     </form>
 
-    <!-- <livewire:contact-form /> -->
 
 
 </div>

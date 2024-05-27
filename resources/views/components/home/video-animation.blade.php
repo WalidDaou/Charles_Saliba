@@ -32,7 +32,3 @@
 
 </div>
 
-
-<style>
-   
-</style>

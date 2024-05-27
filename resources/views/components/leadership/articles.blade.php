@@ -1,6 +1,6 @@
-<div class="article-container w-screen h-[120vh]  main-container flex flex-row gap-[15px] pt-[40px]">
+<div class="article-container w-screen h-[730px]  main-container flex flex-row gap-[15px] pt-[40px]">
 
-    <div class="left-article w-[70%] h-full flex flex-row bg-white " style="box-shadow: 0px 0px 30px #00000012;">
+    <div class="left-article w-[70%] h-full flex flex-row bg-white overflow-scroll" style="box-shadow: 0px 0px 30px #00000012;">
 
 
         <div x-data="{ showFirst: true }" class="w-full h-full flex flex-col gap-[40px] ">
@@ -108,3 +108,6 @@
     </div>
 
 </div>
+
+
+

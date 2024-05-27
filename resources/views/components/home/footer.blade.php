@@ -12,10 +12,10 @@
             </div>
 
             <div class="contact flex flex-col gap-[10px] ">
-                <a class="font font-medium font-16px underline ff">
+                <a href="mailto: Info@charlessaliba.com?subject=Subject%20Here&body=Body%20content%20here." class="font font-medium font-16px underline ff">
                     Info@charlessaliba.com
                 </a>
-                <a class="font font-medium font-16px underline ff">
+                <a href="tel:+961 3 475 364" class="font font-medium font-16px underline ff">
                     +961 3 475 364
                 </a>
             </div>

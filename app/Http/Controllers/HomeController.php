@@ -22,18 +22,26 @@ class HomeController extends Controller
 
         $authorships = Authorship::getAuthorships();
 
-        $videos = Video::get();
+        // $videos = Video::get();
 
-        // $videos = Video::getVideos();
+        $videos = Video::getVideos();
 
 
-        // $books = Book::getBooks();
+        $books = Book::getBooks();
 
-        $books = Book::get();
+        // $books = Book::get();
 
         $journey = Journey::getJournays();
 
-        return view('pages.home-page', ['authorships' => $authorships, 'videos' => $videos, 'books' => $books, 'journey' => $journey]);
+        return view(
+            'pages.home-page',
+            [
+                'authorships' => $authorships,
+                'videos' => $videos,
+                'books' => $books,
+                'journey' => $journey
+            ]
+        );
     }
 
     public function renderLeadership($id)
@@ -89,6 +97,7 @@ class HomeController extends Controller
         return view('pages.charles-saliba', ['charles' => $charles, 'previouslys' => $Previouslys, 'expertises'  => $expertises,]);
     }
 
+    
     public static function contact()
     {
 

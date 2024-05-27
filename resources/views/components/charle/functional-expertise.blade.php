@@ -11,7 +11,7 @@
         </div>
 
 
-        <div class="functional-container flex flex-row ">
+        <div class="functional-container w-[50%] flex flex-row gap-[20px]">
 
 
             <div class="left-f charles-left w-[50%] flex flex-col gap-[10px]  pt-[5px]">
@@ -21,8 +21,8 @@
                 @endphp
                 @foreach($list as $item)
 
-                <ul class="custom-list font font-16px font-normal  ">
-                    <li>{{$item}}</li>
+                <ul class="custom-list  w-fit flex flex-row">
+                    <li></li><p class="font font-16px font-normal">{{$item}}</p>
                 </ul>
 
                 @endforeach

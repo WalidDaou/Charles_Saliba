@@ -38,7 +38,7 @@
                         <p class="font font-semibold font-18px text-[#135D66]">
                             {{ $item->date }}
                         </p>
-                        <p class="journey-width font font-normal font-16px min-w-[200px] max-w-[280px] pr-[30px]">
+                        <p class="journey-width font font-normal font-16px min-w-[200px] max-w-[280px] ">
                             {{ $item->content }}
                         </p>
                     </div>

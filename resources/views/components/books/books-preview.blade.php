@@ -14,7 +14,7 @@
                 <div class="img">
                     <img class="h-[200px]" src="/svgs/home/second-cross.svg" alt="">
                 </div>
-                <div class=" absolute top-[30%] left-[40%]">
+                <div class=" absolute top-[35%] left-[40%]">
                     <p class="font font-bold font-20px">Positive Influence</p>
                 </div>
             </div>

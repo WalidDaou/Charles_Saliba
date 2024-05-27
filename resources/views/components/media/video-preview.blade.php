@@ -39,7 +39,7 @@
     <nav role="navigation" aria-label="Pagination Navigation">
         <ul class="pagination flex space-x-2">
             {{-- Previous Page Link --}}
-            @if ($videos->onFirstPage())
+            <!-- @if ($videos->onFirstPage())
             <li class="page-item disabled" aria-disabled="true" aria-label="@lang('pagination.previous')">
                 <span class="page-link" aria-hidden="true">&lsaquo;</span>
             </li>
@@ -47,7 +47,7 @@
             <li class="page-item">
                 <a class="page-link" href="{{ $videos->previousPageUrl() }}" rel="prev" aria-label="@lang('pagination.previous')">&lsaquo;</a>
             </li>
-            @endif
+            @endif -->
 
             {{-- Pagination Elements --}}
             @foreach ($videos->getUrlRange(1, $videos->lastPage()) as $page => $url)
@@ -58,7 +58,7 @@
             </li>
             @endforeach
 
-            {{-- Next Page Link --}}
+            <!-- {{-- Next Page Link --}}
             @if ($videos->hasMorePages())
             <li class="page-item">
                 <a class="page-link" href="{{ $videos->nextPageUrl() }}" rel="next" aria-label="@lang('pagination.next')">&rsaquo;</a>
@@ -67,7 +67,7 @@
             <li class="page-item disabled" aria-disabled="true" aria-label="@lang('pagination.next')">
                 <span class="page-link" aria-hidden="true">&rsaquo;</span>
             </li>
-            @endif
+            @endif -->
         </ul>
     </nav>
     @endif

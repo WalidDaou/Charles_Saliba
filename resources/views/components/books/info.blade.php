@@ -9,6 +9,7 @@
         <div>
             <p class="font font-40px font-bold ">Positive Influence</p>
         </div>
+
         <div class="flex flex-row pt-[30px]">
             <div class="flex flex-col">
                 <div class="flex flow-row gap-[15px] items-center text-center">
@@ -34,6 +35,7 @@
                 {{$book->content}}
             </p>
         </div>
+        
         <div class="flex flex-row gap-[20px]">
 
             <button class="hovered">Contact Us</button>

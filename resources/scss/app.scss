@@ -24,6 +24,10 @@
     @apply px-[70px]
 }
 
+.books-padding {
+    @apply px-[140px]
+}
+
 .main-container-left {
     @apply main-container
 }
@@ -31,8 +35,6 @@
 .main-container-left {
     padding-right: 0px !important;
 }
-
-
 
 
 .font {
@@ -84,6 +86,7 @@ header {
 
 .font-14px {
     font-size: 14px;
+
 }
 
 .font-12px {
@@ -305,12 +308,12 @@ header {
 
 
 .hovered {
-    
+
     @apply font-12px text-white font relative;
 
     width: 150px;
     height: 35px;
-    position: relative; 
+    position: relative;
     z-index: 1;
 
     background-color: #135D66;
@@ -353,7 +356,7 @@ header {
 }
 
 .slide-animation {
-    animation: slide 30s infinite linear;
+    animation: slide 40s infinite linear;
 }
 
 .slide-animation:hover {
@@ -379,7 +382,7 @@ header {
 }
 
 .slide-animation-2 {
-    animation: slide-2 30s infinite linear;
+    animation: slide-2 40s infinite linear;
 }
 
 /* Pause animation on hover */
@@ -390,6 +393,47 @@ header {
 
 
 // end-animation _______________________________________________
+
+
+
+.Books-carousel-2 {
+
+    width: 100vw;
+    margin-bottom: 0px !important;
+
+
+
+    .f-carousel__slide {
+        width: calc((100% - var(--f-carousel-spacing) * 3) / 3);
+        height: fit-content;
+        background-color: #EDEDED;
+
+    }
+
+    .f-carousel__dots {
+        display: none;
+    }
+
+
+
+    .f-button.is-prev {
+        content: url('/public/svgs/home/left.svg');
+        left: 0 !important;
+    }
+
+    .f-button.is-prev {
+        @apply main-container h-[55px] w-[55px]
+    }
+
+    .f-button.is-next {
+        @apply main-container h-[55px] w-[55px]
+    }
+
+    .f-button.is-next {
+        content: url('/public/svgs/home/right.svg');
+        right: 0 !important;
+    }
+}
 
 
 @media(max-width : 1200px) {
@@ -422,6 +466,14 @@ header {
         .text-resume {
             top: 30%;
             left: 50%;
+
+            .text-one {
+                max-width: 600px;
+            }
+
+            .text-two {
+                max-width: 720px;
+            }
         }
 
         .circile {
@@ -491,15 +543,27 @@ header {
         font-size: 45px;
     }
 
-    .main-title-container {
-        min-height: 75vh;
-    }
+    // .main-title-container {
+    //     min-height: 75vh;
+    // }
 }
 
 
 @media (max-width:1000px) {
+
+
+    .Books-carousel-2 {
+        .f-carousel__slide {
+            width: calc((100% - var(--f-carousel-spacing) * 2) / 2);
+        }
+    }
+
     .main-container {
         @apply px-[50px]
+    }
+
+    .books-padding {
+        @apply px-[120px]
     }
 
     .books-carousel {
@@ -552,7 +616,7 @@ header {
 
     .resume-container {
 
-        height: 60vh;
+        height: 450px;
 
         .text-resume {
             top: 30%;
@@ -780,7 +844,7 @@ header {
     }
 
     .main-title-container {
-        min-height: 65vh;
+        min-height: 500px;
 
         .main-title {
             gap: 10px;
@@ -954,7 +1018,7 @@ header {
         }
 
         .functional-container {
-
+            width: 100%;
             gap: 10px;
 
             .left-f {
@@ -968,6 +1032,22 @@ header {
 
     }
 
+    .books-padding {
+        @apply main-container
+    }
+
+    .Books-carousel-2 {
+        .f-button.is-prev {
+            top: 100% !important;
+            left: 20% !important;
+        }
+
+        .f-button.is-next {
+            top: 100% !important;
+            right: 20% !important;
+        }
+    }
+
 }
 
 @media(max-width: 500px) {
@@ -975,6 +1055,8 @@ header {
     .main-container {
         @apply px-[30px]
     }
+
+
 
     .books-carousel {
 
@@ -1061,7 +1143,7 @@ header {
 
 
     .main-title-container {
-        min-height: 65vh;
+        // min-height: 65vh;
 
         .main-title {
             gap: 10px;
@@ -1073,10 +1155,7 @@ header {
         font-size: 10px;
     }
 
-    .main-title-container {
-        min-height: 60vh;
 
-    }
 
 
     .text-holder {
@@ -1256,6 +1335,14 @@ header {
         }
     }
 
+
+    .Books-carousel-2 {
+        .f-carousel__slide {
+            width: calc((100% - var(--f-carousel-spacing) * 1) / 1);
+        }
+    }
+
+
 }
 
 @media(max-width: 400px) {
@@ -1304,7 +1391,7 @@ header {
 
 
     .main-title-container {
-        min-height: 65vh;
+        min-height: 550px;
 
     }
 
@@ -1373,7 +1460,7 @@ header {
 
 @media(max-width:350px) {
     .main-title-container {
-        min-height: 70vh;
+        // min-height: 70vh;
 
     }
 

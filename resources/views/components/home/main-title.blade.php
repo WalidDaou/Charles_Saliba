@@ -1,4 +1,4 @@
-<div class="main-title-home relative px-[43px] pt-[20px]">
+<div class="main-title-home relative px-[43px] pt-[30px]">
     <div class="img w-[270px]">
         <img class="w-full h-full" src="/svgs/home/cross-main.svg" alt="">
 

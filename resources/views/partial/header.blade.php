@@ -19,8 +19,10 @@
             </svg>
 
         </div>
+
         <div class="flex flex-col">
             <p class="font-extrabold header-logo">CHARLES</p>
+    
             <p class="font-extrabold header-logo">SALIBA</p>
         </div>
 
@@ -28,13 +30,13 @@
 
     <div class="main-header flex flex-row gap-[30px] h-full items-center py-[15px]">
 
-        <a onclick="navigateAndScroll('mySite', 70)" class="font font-medium header-font cursor-pointer">Welcome to My Site</a>
-        <a onclick="navigateAndScroll('authorship', 70)" class="font font-medium header-font cursor-pointer">Authorship</a>
-        <a onclick="navigateAndScroll('media', 70)" class="font font-medium header-font cursor-pointer">Media</a>
-        <a onclick="navigateAndScroll('books', 70)" class="font font-medium header-font cursor-pointer">Books</a>
-        <a onclick="navigateAndScroll('myJourney', 70)" class="font font-medium header-font cursor-pointer">My Journey</a>
-        <a onclick="redirectToCharles('resume', 70)" class="font font-medium header-font cursor-pointer">Resume</a>
-        <button onclick="scrollToDivWithOffset('contactUs', 0)" class="font font-medium hovered" type="submit">Book a Consultation</button>
+        <a onclick="window.navigateAndScroll('mySite', 70)" class="font font-medium header-font cursor-pointer">Welcome to My Site</a>
+        <a onclick="window.navigateAndScroll('authorship', 70)" class="font font-medium header-font cursor-pointer">Authorship</a>
+        <a onclick="window.navigateAndScroll('media', 70)" class="font font-medium header-font cursor-pointer">Media</a>
+        <a onclick="window.navigateAndScroll('books', 70)" class="font font-medium header-font cursor-pointer">Books</a>
+        <a onclick="window.navigateAndScroll('myJourney', 70)" class="font font-medium header-font cursor-pointer">My Journey</a>
+        <a onclick="window.redirectToCharles('resume', 70)" class="font font-medium header-font cursor-pointer">Resume</a>
+        <button onclick="window.scrollToDivWithOffset('contactUs', 0)" class="font font-medium hovered" type="submit">Book a Consultation</button>
 
         <div class="hidden button-header">
             <svg style=" transform: rotate(180deg);" id="my-svg" class="" width="40px" height="40px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -52,24 +54,24 @@
 
 <div class="phone-header hidden w-screen fixed top-[70px] left-[0%] z-[1050] h-[fit-content] bg-white flex-col justify-center items-center gap-[20px] container-padding pt-[25px] pb-[25px]" style="transition: opacity 0.4s ease;">
     <div class="div-seacond cursor-pointer">
-        <a onclick=" navigateAndScroll('mySite', 70) ; closePhoneHeader();" class="font font-medium header-font">Welcome to My Site</a>
+        <a onclick=" window.navigateAndScroll('mySite', 70) ; closePhoneHeader();" class="font font-medium header-font">Welcome to My Site</a>
     </div>
     <div class="div-seacond cursor-pointer">
-        <a onclick=" navigateAndScroll('authorship', 70) ; closePhoneHeader();" class="font font-medium header-font">Authorship</a>
+        <a onclick=" window.navigateAndScroll('authorship', 70) ; closePhoneHeader();" class="font font-medium header-font">Authorship</a>
     </div>
     <div class="div-seacond cursor-pointer">
-        <a onclick=" navigateAndScroll('media', 70) ; closePhoneHeader();" class="font font-medium header-font">Media</a>
+        <a onclick=" window.navigateAndScroll('media', 70) ; closePhoneHeader();" class="font font-medium header-font">Media</a>
     </div>
     <div class="div-seacond cursor-pointer">
-        <a onclick=" navigateAndScroll('books', 70) ; closePhoneHeader();" class="font font-medium header-font">Books</a>
+        <a onclick=" window.navigateAndScroll('books', 70) ; closePhoneHeader();" class="font font-medium header-font">Books</a>
     </div>
     <div class="div-seacond cursor-pointer">
-        <a onclick=" navigateAndScroll('myJourney', 70) ; closePhoneHeader();" class="font font-medium header-font">My Journey</a>
+        <a onclick=" window.navigateAndScroll('myJourney', 70) ; closePhoneHeader();" class="font font-medium header-font">My Journey</a>
     </div>
     <div class="div-seacond cursor-pointer">
-        <a onclick=" redirectToCharles('resume', 70) ; closePhoneHeader();" class="font font-medium header-font">Resume</a>
+        <a onclick=" window.redirectToCharles('resume', 70) ; closePhoneHeader();" class="font font-medium header-font">Resume</a>
     </div>
-    <button onclick=" scrollToDivWithOffset('contactUs', 0) ; closePhoneHeader();" class="font font-medium hovered" type="submit">
+    <button onclick=" window.scrollToDivWithOffset('contactUs', 0) ; closePhoneHeader();" class="font font-medium hovered" type="submit">
         Book a Consultation
     </button>
 </div>
@@ -79,6 +81,7 @@
 
 
 <div id="heightDiv" class="w-screen">
+
 
 </div>
 
@@ -146,7 +149,7 @@
 
     function closePhoneHeader() {
         var phoneHeader = document.querySelector('.phone-header');
-         phoneHeader.classList.toggle('show-header');
+        phoneHeader.classList.toggle('show-header');
 
 
     }

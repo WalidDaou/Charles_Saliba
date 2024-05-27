@@ -14,7 +14,7 @@
 
 @endcomponent
 
-<div id="mySite" class="relative main-title-container min-h-[100vh] mt-[20px]">
+<div id="mySite" class="relative main-title-container min-h-[600px] mt-[20px]">
 
     <div class="absolute top-0 left-0  z-[11]">
         @component('components.title')
